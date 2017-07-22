@@ -166,30 +166,87 @@
       .resource-modal li > ul {
         margin-bottom: 1em;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Questions API documentation <small>version v1</small></h1><p>http://api.e-bookmobile.com/{version}</p><ul><li><strong>version</strong>: <em>required (v1)</em></li></ul></div><div class="panel panel-default"><div class="panel-heading"><h3 id="questions" class="panel-title">Resources related to questions in the API.</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions"><span class="parent"></span>/questions</a> <span class="methods"><a href="#questions_get"><span class="badge badge_get">get</span></a> <a href="#questions_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_questions" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div><div onclick="window.location.href = '#questions_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>You may create your own question using this action. It takes a JSON object containing a question and a collection of answers in the form of choices.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/questions</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#questions_get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions_get_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>[
-    {
-        "question": "Favourite programming language?",
-        "published_at": "2014-11-11T08:40:51.620Z",
-        "url": "/questions/1",
-        "choices": [
-            {
-                "choice": "Swift",
-                "url": "/questions/1/choices/1",
-                "votes": 2048
-            }, {
-                "choice": "Python",
-                "url": "/questions/1/choices/2",
-                "votes": 1024
-            }, {
-                "choice": "Objective-C",
-                "url": "/questions/1/choices/3",
-                "votes": 512
-            }, {
-                "choice": "Ruby",
-                "url": "/questions/1/choices/4",
-                "votes": 256
-            }
-        ]
-    }
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>Questions API documentation</h1><p></p></div><div class="panel panel-default"><div class="panel-heading"><h3 id="questions" class="panel-title">Resources related to questions in the API.</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions"><span class="parent"></span>/questions</a> <span class="methods"><a href="#questions_get"><span class="badge badge_get">get</span></a> <a href="#questions_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_questions" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>List All Questions</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#questions_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Create a New Question</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/questions</h4></div><div class="modal-body"><div class="alert alert-info"><p>List All Questions</p></div><ul class="nav nav-tabs"><li class="active"><a href="#questions_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: array</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>[
+  {
+    "question": "Favourite programming language?",
+    "published_at": "2014-11-11T08:40:51.620Z",
+    "url": "/questions/1",
+    "choices": [
+      {
+        "choice": "Swift",
+        "url": "/questions/1/choices/1",
+        "votes": 2048
+      }, {
+        "choice": "Python",
+        "url": "/questions/1/choices/2",
+        "votes": 1024
+      }, {
+        "choice": "Objective-C",
+        "url": "/questions/1/choices/3",
+        "votes": 512
+      }, {
+        "choice": "Ruby",
+        "url": "/questions/1/choices/4",
+        "votes": 256
+      }
+    ]
+  }
 ]
-</code></pre></div></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions_post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/questions</h4></div><div class="modal-body"><div class="alert alert-info"><p>You may create your own question using this action. It takes a JSON object containing a question and a collection of answers in the form of choices.</p></div><ul class="nav nav-tabs"></ul><div class="tab-content"></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions__question_id_"><span class="parent">/questions</span>/{question_id}</a> <span class="methods"><a href="#questions__question_id__get"><span class="badge badge_get">get</span></a> <a href="#questions__question_id__delete"><span class="badge badge_delete">delete</span></a></span></h4></div><div id="panel_questions__question_id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions__question_id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div><div onclick="window.location.href = '#questions__question_id__delete'" class="list-group-item"><span class="badge badge_delete">delete</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions__question_id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/questions</span>/{question_id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#questions__question_id__get_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions__question_id__get_request"><h3>URI Parameters</h3><ul><li><strong>question_id</strong>: <em>required (string)</em></li></ul></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions__question_id__delete"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_delete">delete</span> <span class="parent">/questions</span>/{question_id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#questions__question_id__delete_request" data-toggle="tab">Request</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions__question_id__delete_request"><h3>URI Parameters</h3><ul><li><strong>question_id</strong>: <em>required (string)</em></li></ul></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#questions">Resources related to questions in the API.</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions_post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/questions</h4></div><div class="modal-body"><div class="alert alert-info"><p>Create a New Question</p></div><ul class="nav nav-tabs"><li class="active"><a href="#questions_post_request" data-toggle="tab">Request</a></li><li><a href="#questions_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions_post_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "question": "Favourite programming language?",
+  "choices": [
+    "Swift",
+    "Python",
+    "Objective-C",
+    "Ruby"
+  ]
+}
+</code></pre></div></div><div class="tab-pane" id="questions_post_response"><h2>HTTP status code <a href="http://httpstatus.es/201" target="_blank">201</a></h2><h3>Headers</h3><ul><li><strong>Location</strong>: <em>required (string)</em><p><strong>Example</strong>:</p><div class="examples"><pre><code>/questions/1</code></pre></div></li></ul><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "question": "Favourite programming language?",
+  "published_at": "2014-11-11T08:40:51.620Z",
+  "url": "/questions/1",
+  "choices": [
+    {
+      "choice": "Swift",
+      "url": "/questions/1/choices/1",
+      "votes": 0
+    }, {
+      "choice": "Python",
+      "url": "/questions/1/choices/2",
+      "votes": 0
+    }, {
+      "choice": "Objective-C",
+      "url": "/questions/1/choices/3",
+      "votes": 0
+    }, {
+      "choice": "Ruby",
+      "url": "/questions/1/choices/4",
+      "votes": 0
+    }
+  ]
+}
+</code></pre></div></div></div></div></div></div></div></div><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_questions__question_id_"><span class="parent">/questions</span>/{question_id}</a> <span class="methods"><a href="#questions__question_id__get"><span class="badge badge_get">get</span></a> <a href="#questions__question_id__delete"><span class="badge badge_delete">delete</span></a></span></h4></div><div id="panel_questions__question_id_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#questions__question_id__get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>View a Questions Detail</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#questions__question_id__delete'" class="list-group-item"><span class="badge badge_delete">delete</span><div class="method_description"></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions__question_id__get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent">/questions</span>/{question_id}</h4></div><div class="modal-body"><div class="alert alert-info"><p>View a Questions Detail</p></div><ul class="nav nav-tabs"><li class="active"><a href="#questions__question_id__get_request" data-toggle="tab">Request</a></li><li><a href="#questions__question_id__get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions__question_id__get_request"><h3>URI Parameters</h3><ul><li><strong>question_id</strong>: <em>required (integer)</em><p>ID of the Question in the form of an integer</p></li></ul></div><div class="tab-pane" id="questions__question_id__get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "question": "Favourite programming language?",
+  "published_at": "2014-11-11T08:40:51.620Z",
+  "url": "/questions/1",
+  "choices": [
+    {
+      "choice": "Swift",
+      "url": "/questions/1/choices/1",
+      "votes": 2048
+    }, {
+      "choice": "Python",
+      "url": "/questions/1/choices/2",
+      "votes": 1024
+    }, {
+      "choice": "Objective-C",
+      "url": "/questions/1/choices/3",
+      "votes": 512
+    }, {
+      "choice": "Ruby",
+      "url": "/questions/1/choices/4",
+      "votes": 256
+    }
+  ]
+}
+</code></pre></div></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="questions__question_id__delete"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_delete">delete</span> <span class="parent">/questions</span>/{question_id}</h4></div><div class="modal-body"><ul class="nav nav-tabs"><li class="active"><a href="#questions__question_id__delete_request" data-toggle="tab">Request</a></li><li><a href="#questions__question_id__delete_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="questions__question_id__delete_request"><h3>URI Parameters</h3><ul><li><strong>question_id</strong>: <em>required (integer)</em><p>ID of the Question in the form of an integer</p></li></ul></div><div class="tab-pane" id="questions__question_id__delete_response"><h2>HTTP status code <a href="http://httpstatus.es/204" target="_blank">204</a></h2></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#questions">Resources related to questions in the API.</a></li></ul></div></div></div></div></body></html>
