@@ -1,5 +1,138 @@
 # Swagger
 
+## Example
+
+```yaml
+swagger: '2.0'
+info:
+  title: ''
+  version: ''
+  description: ''
+paths:
+  /questions:
+    get:
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          examples:
+            application/json:
+              - question: Favourite programming language?
+                published_at: '2014-11-11T08:40:51.620Z'
+                url: /questions/1
+                choices:
+                  - choice: Swift
+                    url: /questions/1/choices/1
+                    votes: 2048
+                  - choice: Python
+                    url: /questions/1/choices/2
+                    votes: 1024
+                  - choice: Objective-C
+                    url: /questions/1/choices/3
+                    votes: 512
+                  - choice: Ruby
+                    url: /questions/1/choices/4
+                    votes: 256
+      summary: List All Questions
+      description: ''
+      tags:
+        - Questions
+      parameters: []
+      produces:
+        - application/json
+    post:
+      responses:
+        '201':
+          description: Created
+          headers: {}
+          examples:
+            application/json:
+              question: Favourite programming language?
+              published_at: '2014-11-11T08:40:51.620Z'
+              url: /questions/1
+              choices:
+                - choice: Swift
+                  url: /questions/1/choices/1
+                  votes: 0
+                - choice: Python
+                  url: /questions/1/choices/2
+                  votes: 0
+                - choice: Objective-C
+                  url: /questions/1/choices/3
+                  votes: 0
+                - choice: Ruby
+                  url: /questions/1/choices/4
+                  votes: 0
+      summary: Create a New Question
+      description: |-
+        You may create your own question using this action. It takes a JSON object
+        containing a question and a collection of answers in the form of choices.
+
+        + question (string) - The question
+
+        + choices (array[string]) - A collection of choices.
+      tags:
+        - Questions
+      parameters: []
+      produces:
+        - application/json
+  '/questions/{question_id}':
+    get:
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          examples:
+            application/json:
+              question: Favourite programming language?
+              published_at: '2014-11-11T08:40:51.620Z'
+              url: /questions/1
+              choices:
+                - choice: Swift
+                  url: /questions/1/choices/1
+                  votes: 2048
+                - choice: Python
+                  url: /questions/1/choices/2
+                  votes: 1024
+                - choice: Objective-C
+                  url: /questions/1/choices/3
+                  votes: 512
+                - choice: Ruby
+                  url: /questions/1/choices/4
+                  votes: 256
+      summary: View a Questions Detail
+      description: ''
+      tags:
+        - Questions
+      parameters:
+        - name: question_id
+          in: path
+          description: ID of the Question in the form of an integer
+          required: true
+          type: number
+      produces:
+        - application/json
+    delete:
+      responses:
+        '204':
+          description: No Content
+          headers: {}
+          examples: {}
+      summary: Delete
+      description: ''
+      tags:
+        - Questions
+      parameters:
+        - name: question_id
+          in: path
+          description: ID of the Question in the form of an integer
+          required: true
+          type: number
+definitions:
+  Question Collection: {}
+  Question: {}
+```
+
 ## Install
 
 `wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar -O swagger-codegen-cli.jar`
